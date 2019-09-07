@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="eng">
+<input type="button" value="Search" onclick="Search();" id="search">
+<p id="result"></p>
+<script>
+    let Eng = ["Cat", "Football", "Programmer", "Array"];
+    let Vn = ["Con Mèo", "Bóng Đá", "Lập trình viên", "Mảng"];
+    function Search() {
+        let input = document.getElementById('eng').value;
+        for (let i=0;i<Eng.length;i++){
+            if (input === Eng[i]){
+                document.getElementById("result").innerHTML = Vn[i];
+                return Vn[i];
+            }
+        }
+        document.write("Not found");
+        return false;
+    }
+</script>
+</body>
+</html>
